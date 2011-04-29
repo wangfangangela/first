@@ -8,9 +8,8 @@
 <body>
 <?php
 include('header.php');
-$link = mysql_connect('localhost','root','');
-mysql_select_db('my_wow',$link);
-mysql_query('SET NAMES "UTF8"');
+include('function.php');
+$conn = db_connect();
 
 $sql = "select
 	us.site_name, 
@@ -30,13 +29,13 @@ $sql = "select
 				us.site_num ASC , 
 				bs.boss_num ASC";
 		
-$sq = mysql_query($sql);
-$num = mysql_num_rows($sq);
+$rs = $conn->query($sql);
+$num = $rs->num_rows;
 //echo $num."<br />";
 $i=1;
 while($i<=$num)
 {
-	$row = mysql_fetch_array($sq);
+	$row = $rs->fetch_array();
 	if($i == 1)
 	{	
 		$string1 = $row['site_name'];
@@ -66,7 +65,7 @@ while($i<=$num)
 	}
 	$i++;
 } 
-mysql_close($link);  
+$conn->close();  
 
 ?>
 </body>
