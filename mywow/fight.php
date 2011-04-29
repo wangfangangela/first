@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Language" content="zh-cn"/>
 	<link rel = stylesheet href= "style.css" type = "text/css" />
 	
-	<script type = "text/javascript" src = "jQuery.js"></script>
+	<script type = "text/javascript" src = "jquery.js"></script>
 	<script type = "text/javascript">
 	$(document).ready(function(){
 	$("#box").hide();
