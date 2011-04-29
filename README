@@ -1,2 +1,6 @@
 ﻿王芳
 login.php是最开始进入miniwow入口
+~~~~~~~~~
+2011-04-29
+主要修改了fight.php中关以前不统一连接数据库 改正用function.php
+和searchII.php中jQuery.js链接库改成jquery.js
